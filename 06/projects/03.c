@@ -6,8 +6,10 @@ int main(void)
     int gcd;
     int remainder;
 
-    printf("Enter two integers separated by a space: ");
-    scanf("%d %d", &m, &n);
+    printf("Enter a fraction: ");
+    scanf("%d/%d", &m, &n);
+
+    int m_og = m, n_og = n;
 
     // *** Use Euclid's algorithm ***
     for (;;) {
@@ -19,6 +21,6 @@ int main(void)
     }
     gcd = m;
 
-    printf("%d\n", gcd);
+    printf("%d/%d\n", m_og/gcd, n_og/gcd);
     return 0;
 }
